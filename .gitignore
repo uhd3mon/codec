@@ -1,0 +1,18 @@
+# This repository holds documentation and one screenshot. Nothing else.
+# Builds are attached to GitHub Releases; they are never committed here.
+*.AppImage
+*.exe
+*.dmg
+*.deb
+*.rpm
+*.asar
+*.tar.gz
+*.zip
+*.blockmap
+node_modules/
+release/
+dist/
+build/
+src/
+server/
+client/
