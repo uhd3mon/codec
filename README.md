@@ -5,11 +5,13 @@
 **Self-hosted voice, video and text chat. You run the server; nobody else owns
 the room.**
 
-Codec is a desktop chat app and the server behind it. Spaces with their own
-channels, roles and rules. Voice, video and screen sharing that go straight
-between the people in the call. Direct messages that filter out strangers until
-you say otherwise. And an admin panel that tells a server owner what is actually
-happening on their instance, rather than leaving them to guess.
+Codec is a desktop chat app and the server behind it. One server is one Guild:
+its own channels, ranks, rules and members, and everyone who joins is in it. No
+layer of sub-communities to set up before anyone can say anything. Voice, video
+and screen sharing go straight between the people in the call. Direct messages
+filter out strangers until you say otherwise. And an admin panel tells a server
+owner what is actually happening on their instance, rather than leaving them to
+guess.
 
 [**Download the latest release →**](../../releases/latest)
 
@@ -35,14 +37,30 @@ happening on their instance, rather than leaving them to guess.
 
 ### Organise
 
-- **Spaces** — your own community inside a server, with its own channels,
-  categories, roles, bans and rules page.
+- **One server, one Guild.** Its channels, categories, ranks, bans and rules
+  page — and everybody who joins is already in it. Nothing to join first.
+- **Channels have their own identity.** A name, a topic, a description and a
+  picture that shows beside it in the list and in the header.
+- **Invite links belong to a channel**, public or private. Share one and it
+  takes whoever follows it straight into that room.
 - **Drag to arrange.** Channels between categories, categories into whatever
   order you want, and anything into Favorited to keep it at hand.
-- **Every space keeps a `#rules` and a `#general`.** They can be renamed; they
-  cannot be deleted out from under the people using them.
-- **Anyone can make a channel.** Only the people running the space decide where
+- **`#rules` and `#general` are always there.** They can be renamed; they
+  cannot be deleted out from under the people using them, and everyone is in
+  both from the moment they join.
+- **Anyone can make a channel.** Only the people running the guild decide where
   it is filed.
+
+### Ranks
+
+Member → Moderator → Super Moderator → Operator → Superuser.
+
+- **Moderator** moderates the channels they were promoted in.
+- **Super Moderator** does the same in every channel on the server, and can
+  lock or unlock any of them.
+- **Operator** runs the guild: its name, its description, its picture, its
+  channels and its members.
+- **Superuser** runs the server, and has the admin panel.
 
 ### Messages
 
@@ -64,18 +82,18 @@ happening on their instance, rather than leaving them to guess.
 - **An admin panel worth opening** — who is online against how many connections,
   message volume over a fortnight, the busiest channels and people, live calls,
   storage and what compression saved.
-- **Space accountability.** Open reports per space, how long the oldest has sat,
-  and whether the space's own staff are clearing them or you are doing it for
-  them.
+- **Accountability.** Open reports, how long the oldest has sat, and whether
+  the guild's own staff are clearing them or you are doing it for them.
 - **A full audit log**, filterable by action and by person.
-- **Reports** from any message, profile or channel, reaching that space's
+- **Reports** from any message, profile or channel, reaching the guild's
   moderators and the server owner.
 - **Switches that matter**: avatar uploads, image uploads, and the size limit,
   all changeable without a restart.
 
 ### The app
 
-- **A terminal theme** — dark, monospace chrome, one accent colour.
+- **A terminal look** — monospace chrome and one accent colour, in dark or
+  light. Dark is the default.
 - **Adjustable interface scale**, 80% to 150%.
 - **A mobile layout that works**, with both side columns as drawers and every
   admin table folded into readable cards.
@@ -99,6 +117,10 @@ systemd service called `codec` on port 6670.
 
 **The first sign-in is `superuser` / `admin`, and you are made to change it
 before you can do anything else.**
+
+A new server starts as a guild called **Test-Guild** with `#rules` and
+`#general` in it. Rename it to whatever your community is called — click its
+name at the top of the sidebar.
 
 Put a reverse proxy in front of it, terminate TLS there, and point the client at
 your domain. Example nginx:
