@@ -34,6 +34,15 @@ guess.
 - **You can see who is talking** — their row lifts, their tile takes a border.
 - **Call controls sit next to the call button**, in every window a call can
   happen in, and appear only once a call is actually connected.
+- **Push to talk or open mic**, on a key or a mouse button — the side buttons
+  included. The key works while you are looking at a game rather than at Codec.
+- **A noise gate that is actually on**, so the room behind somebody is not in
+  the call between their sentences, and automatic gain so a quiet microphone
+  still arrives at a normal level.
+- **Per-person volume** on anybody's profile card, for whoever is always too
+  loud or too quiet.
+- **The channel header turns green** when there is a call happening in it,
+  whether or not you are in it.
 
 ### Organise
 
@@ -62,6 +71,34 @@ Member → Moderator → Super Moderator → Operator → Superuser.
   channels and its members.
 - **Superuser** runs the server, and has the admin panel.
 
+### Emotes and Twitch
+
+- **Your Twitch emotes, here.** Link your account with `/link` and you can use
+  everything you already hold on Twitch — subscriptions, follower emotes,
+  channel-point unlocks — in every channel.
+- **BTTV and 7TV** are supported alongside Twitch's own, global sets included.
+- **The picker is organised the way you think about it**: your own channel
+  first, then each channel you are subscribed to under its own name and
+  picture, then Twitch, BTTV and 7TV. Every tier of a channel's emotes, and its
+  follower emotes, sit together under that channel.
+- **A purple ring** around somebody's picture while they are live, and a card
+  on their profile with the game, the title and a link to the stream.
+- **A channel operator can attach their own Twitch channel** to a channel they
+  run, which adds that broadcaster's emotes to it.
+- Codec asks Twitch for exactly one permission — the right to read which emotes
+  you may use. It cannot post, follow, subscribe, or read a message.
+
+### Presence
+
+- **See what people are playing.** Codec reads the name of the running program
+  and shows it under their name, with an Activity strip at the top of the
+  member list showing the three most recent and how long they have been at it.
+  It reports the program's name and nothing else — never a window title, never
+  a path — and it is a setting you control.
+- **Games are recognised by name where it matters** and by where they are
+  installed otherwise, so titles nobody has heard of still show up correctly.
+  Launchers, browsers and Codec itself never do.
+
 ### Messages
 
 - **Message requests.** Anyone can write to you; a stranger's first message
@@ -74,6 +111,15 @@ Member → Moderator → Super Moderator → Operator → Superuser.
   a browser.
 - **History loads as you scroll**, fifty at a time, rather than pulling a
   channel's entire past on open.
+- **Every channel remembers where you were.** Switch away and back and you are
+  where you left off, with a **New messages** line marking the first thing that
+  arrived while you were gone.
+- **Links behave.** A pasted URL is shown as the site and the part that
+  matters, with a card underneath carrying the page's picture and title. A
+  Codec channel link becomes a card with the channel's picture and a Join
+  button.
+- **Pictures, several at a time**, with a thumbnail each and one caption for
+  the lot.
 
 ### Run it
 
@@ -89,6 +135,13 @@ Member → Moderator → Super Moderator → Operator → Superuser.
   moderators and the server owner.
 - **Switches that matter**: avatar uploads, image uploads, and the size limit,
   all changeable without a restart.
+- **Twitch, set up from the panel.** Paste in your own application's keys and
+  it takes effect immediately; the redirect address you have to register is
+  shown with a Copy button.
+- **A restart button**, for the rare thing that needs one. Everyone is warned
+  first and reconnects on their own.
+- **The client and the server update independently.** A fix to the app does not
+  cost the people mid-call their call.
 
 ### The app
 
@@ -98,6 +151,9 @@ Member → Moderator → Super Moderator → Operator → Superuser.
 - **A mobile layout that works**, with both side columns as drawers and every
   admin table folded into readable cards.
 - **Self-updating**, both platforms, from this repository.
+- **Desktop notifications** for mentions, direct messages, calls, friend
+  requests and arrivals — each with its own switch, and each able to be turned
+  off on its own.
 
 ---
 
