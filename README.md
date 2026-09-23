@@ -35,7 +35,7 @@ Repository: https://uhd3mon.github.io/codec/fdroid/repo
 Signing fingerprint:
 `AF68C2CEDD5E12C7591057D1BFD8B9A081E8967A7DDC2BE351A427034074E8B7`
 
-This is Codec's own repository, which you add once to Droid-ify. Android **1.5.1**
+This is Codec's own repository, which you add once to Droid-ify. Android **1.5.2**
 is available now, with the Codec logo and automatic discovery of future releases.
 
 ## What it does
@@ -59,7 +59,7 @@ is available now, with the Codec logo and automatic discovery of future releases
   still arrives at a normal level.
 - **Per-person volume** on anybody's profile card, for whoever is always too
   loud or too quiet.
-- **The channel header turns green** when there is a call happening in it,
+- **The channel header turns blue** when there is a call happening in it,
   whether or not you are in it.
 
 ### Organise
