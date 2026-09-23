@@ -1,4 +1,5 @@
-# This repository holds documentation and one screenshot. Nothing else.
+# This repository holds documentation, screenshots and the Pages deployment workflow.
+# Application source and signing keys are never published.
 # Builds are attached to GitHub Releases; they are never committed here.
 *.AppImage
 *.exe
@@ -16,3 +17,11 @@ build/
 src/
 server/
 client/
+
+*.apk
+*.jar
+*.jks
+*.keystore
+*.p12
+*.pem
+config.yml

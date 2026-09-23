@@ -1,0 +1,48 @@
+name: Android repository
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing release containing the signed repository bundle
+        required: true
+        type: string
+      sha256:
+        description: SHA-256 of Codec-fdroid-site.tar.gz
+        required: true
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: android-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download verified public repository bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          BUNDLE_SHA256: ${{ inputs.sha256 }}
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^[A-Za-z0-9._-]+$ ]]
+          [[ "$BUNDLE_SHA256" =~ ^[a-f0-9]{64}$ ]]
+          gh release download "$RELEASE_TAG" -R "$GITHUB_REPOSITORY" -p Codec-fdroid-site.tar.gz
+          printf '%s  Codec-fdroid-site.tar.gz\n' "$BUNDLE_SHA256" | sha256sum --check --strict
+          mkdir site
+          tar -xzf Codec-fdroid-site.tar.gz -C site
+          test -f site/fdroid/repo/index-v1.jar
+          test -f site/fdroid/repo/entry.jar
+          test -f site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

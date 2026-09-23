@@ -20,6 +20,24 @@ guess.
 
 ---
 
+## Android — Droid-ify
+
+Add the official Codec repository to Droid-ify to install Android releases and
+receive updates directly on your device.
+
+1. Open [the Android download page](https://uhd3mon.github.io/codec/).
+2. In Droid-ify, open **Repositories**, choose **Add repository**, then paste the
+   repository link from that page or scan its QR code.
+3. Enable **Codec for Android**, refresh, search for **Codec**, and install it.
+
+Repository: https://uhd3mon.github.io/codec/fdroid/repo
+
+Signing fingerprint:
+`AF68C2CEDD5E12C7591057D1BFD8B9A081E8967A7DDC2BE351A427034074E8B7`
+
+This is Codec's own repository, which you add once to Droid-ify. The Android
+1.5.1 rebuild remains a private preview; the feed currently offers 1.4.95.
+
 ## What it does
 
 ### Talk
