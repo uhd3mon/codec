@@ -10,7 +10,7 @@ Self-hosted voice, video and chat, laid out as a space you can move around in.</
 <p align="center">
   <a href="https://codec.d3mon.gg"><b>Website</b></a> ·
   <a href="../../releases/latest"><b>Download</b></a> ·
-  <a href="#android--droid-ify"><b>Android</b></a> ·
+  <a href="#android"><b>Android</b></a> ·
   <a href="#server"><b>Run a server</b></a>
 </p>
 
@@ -128,22 +128,10 @@ chmod +x Codec.AppImage
 
 No install step. It updates itself in place.
 
-### Android — Droid-ify
+### Android
 
-Add the official Codec repository to Droid-ify to install Codec and get every
-update on your phone.
-
-1. Open [the Android download page](https://uhd3mon.github.io/codec/).
-2. In Droid-ify, open **Repositories**, choose **Add repository**, then paste the
-   repository link from that page or scan its QR code.
-3. Enable **Codec for Android**, refresh, search for **Codec**, and install it.
-
-Repository: https://uhd3mon.github.io/codec/fdroid/repo
-
-Signing fingerprint:
-`AF68C2CEDD5E12C7591057D1BFD8B9A081E8967A7DDC2BE351A427034074E8B7`
-
-Or download `Codec.apk` from the [latest release](../../releases/latest).
+Download `Codec.apk` from the [latest release](../../releases/latest) and open
+it to install. It updates itself in place. Google Play is coming soon.
 
 ### Server
 
